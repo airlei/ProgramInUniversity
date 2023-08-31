@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>ECharts</title>
+  <!-- 引入刚刚下载的 ECharts 文件 -->
+  <script src="JS/echarts.js"></script>
+  <script src="JS/jquery-3.1.1.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/echarts-gl/dist/echarts-gl.min.js"></script>
+</head>
+<body>
+
+<div id="main" class="list-main">
+  <!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
+  <div id="areaone" style="width: 2000px;height:1000px;"></div>
+  <script type="text/javascript">
+    var goodsNamedata = [];
+    var salesMountdata = [];
+    var salesMountdata0 = [];
+    var url = "Servletselect";
+    <!--使用ajax动态获取数据，将获取的数据放到数组中-->
+    $.ajax({
+      async: false,
+      type: "GET",
+      url: url,
+      dataType: 'json',
+      contentType: "application/json;charset=UTF-8",
+      success: function(result){
+        console.log(result);
+        for (var i = 0; i < result.length; i++) {
+          goodsNamedata.push(result[i].day_id);
+          salesMountdata.push(result[i].round);
+          salesMountdata0.push(result[i].cnt);
+          console.log(result[i].cnt)
+        }
+      }
+    });
+    var chartDom = document.getElementById('areaone');
+    var myChart = echarts.init(chartDom);
+    var option;
+    // prettier-ignore
+    const data = []
+    for(var i=0;i<goodsNamedata.length;i++)
+    {
+      data.push([goodsNamedata[i],salesMountdata[i]]);
+      // console.log(data);
+    }
+    const data1 = []
+    for(var i=0;i<goodsNamedata.length;i++)
+    {
+      data1.push([goodsNamedata[i],salesMountdata0[i]]);
+      // console.log(data);
+    }
+    const dateList = data.map(function (item) {
+      return item[0];
+    });
+    const valueList = data1.map(function (item) {
+      return item[1];
+    });
+    option = {
+      // Make gradient line here
+      visualMap: [
+        {
+          show: false,
+          type: 'continuous',
+          seriesIndex: 0,
+          min: 0,
+          max: 400
+        },
+        {
+          show: false,
+          type: 'continuous',
+          seriesIndex: 1,
+          dimension: 0,
+          min: 0,
+          max: dateList.length - 1
+        }
+      ],
+      title: [
+        {
+          left: 'center',
+          text: 'Gradient along the y axis'
+        },
+        {
+          top: '55%',
+          left: 'center',
+          text: 'Gradient along the x axis'
+        }
+      ],
+      tooltip: {
+        trigger: 'axis'
+      },
+      xAxis: [
+        {
+          data: dateList
+        },
+        {
+          data: dateList,
+          gridIndex: 1
+        }
+      ],
+      yAxis: [
+        {},
+        {
+          gridIndex: 1
+        }
+      ],
+      grid: [
+        {
+          bottom: '60%'
+        },
+        {
+          top: '60%'
+        }
+      ],
+      series: [
+        {
+          type: 'line',
+          showSymbol: false,
+          data: valueList
+        },
+        {
+          type: 'line',
+          showSymbol: false,
+          data: valueList,
+          xAxisIndex: 1,
+          yAxisIndex: 1
+        }
+      ]
+    };
+
+    option && myChart.setOption(option);
+
+  </script>
+</div>
+</body>
+</html>

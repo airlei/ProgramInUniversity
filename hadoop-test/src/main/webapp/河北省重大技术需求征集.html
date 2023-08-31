@@ -1,0 +1,318 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+<title>需求征集</title>
+</head>
+<style>
+.maintable
+{
+	border:black soild 1px;
+}
+.maintr
+{
+	
+}
+.maintd
+{
+	background: white;
+	border:black soild 1px;
+}
+</style>
+<body>
+<br>
+<br>
+<center>
+	<b>河北省重大技术需求征集表</b>
+	<br>
+	<br>
+	<table class="maintable">
+		<tr>
+			<td class="maintd">
+				<b>*机构全称</b>
+			</td>
+			<td class="maintd" colspan="2">
+				<input size="98" id="need"/>
+			</td>
+		</tr>
+		<tr>
+			<td class="maintd">
+				<b>归口管理部门</b>
+			</td>
+			<td class="maintd" colspan="2">
+				<input size="98" id="need"/>
+			</td>
+		</tr>
+		<tr>
+			<td class="maintd">
+				<b>*通讯地址</b>
+			</td>
+			<td class="maintd" colspan="2">
+				<input size="98" id="need"/>
+			</td>
+		</tr>
+		<tr>
+			<td class="maintd">
+				<b>*所在地域</b>
+			</td>
+			<td class="maintd" colspan="2">
+				<input size="98" id="need"/>
+			</td>
+		</tr>
+		<tr>
+			<td class="maintd">
+				<b>网  址</b>
+			</td>
+			<td class="maintd" colspan="2">
+				<input size="98" id="need"/>
+			</td>
+		</tr>
+		<tr>
+			<td class="maintd">
+				<b>*电子信箱</b>
+			</td>
+			<td class="maintd" colspan="2">
+				<input size="98" id="need"/>
+			</td>
+		</tr>
+		<tr>
+			<td class="maintd">
+				<b>*法人代表</b>
+			</td>
+			<td class="maintd" colspan="2">
+				<input size="98" id="need"/>
+			</td>
+		</tr>
+		<tr>
+			<td class="maintd">
+				<b>邮政编码</b>
+			</td>
+			<td class="maintd" colspan="2">
+				<input size="98" id="need"/>
+			</td>
+		</tr>
+		<tr>
+			<td class="maintd">
+				<b>*联 系 人</b>
+			</td>
+			<td class="maintd" colspan="2">
+				<input size="98" id="need"/>
+			</td>
+		</tr>
+		<tr>
+			<td class="maintd">
+				<b>*电  话</b>
+			</td>
+			<td class="maintd" colspan="2">
+				<input size="98" id="need"/>
+			</td>
+		</tr>
+		<tr>
+			<td class="maintd">
+				<b>*机构属性</b>
+			</td>
+			<td class="maintd" colspan="2">
+				<label>
+					<input id="mod1" name="mod" type="radio" checked/>企业
+				</label>
+				<label>
+					<input id="mod2" name="mod" type="radio"/>高等院校
+				</label>
+				<label>
+					<input id="mod3" name="mod" type="radio"/>研究机构
+				</label>
+				<label>
+					<input id="mod4" name="mod" type="radio"/>其他
+				</label>
+			</td>
+		</tr>
+		<tr>
+			<td class="maintd">
+				<b>*机构简介</b>
+			</td>
+			<td class="maintd" colspan="2">
+				<textarea rows="5" cols="80" id="inform" οnblur="if(document.getElementById('inform').value=='')document.getElementById('inform').value='（主要包括基本情况、现有研究基础等，限500字以内）';" οnclick="if(document.getElementById('inform').value=='（主要包括基本情况、现有研究基础等，限500字以内）')document.getElementById('inform').value='';">（主要包括基本情况、现有研究基础等，限500字以内）</textarea>
+			</td>
+		</tr>
+		<tr>
+			<td class="maintd">
+				<b>*技术需求名称</b>
+			</td>
+			<td class="maintd" colspan="2">
+				<input size="98" id="need"/>
+			</td>
+		</tr>
+		<tr>
+			<td class="maintd">
+				<b>*需求时限</b>
+			</td>
+			<td class="maintd" colspan="2">
+				<input size="98" id="need"/>
+			</td>
+		</tr>
+		<tr>
+			<td class="maintd">
+				<b>技术需求概述</b>
+			</td>
+			<td class="maintd" colspan="2">
+				<textarea rows="5" cols="80" id="inform" οnblur="if(document.getElementById('inform').value=='')document.getElementById('inform').value='1、主要问题（需要解决的重大技术问题，限500字以内）
+				2、技术关键（所需的关键技术、主要指标，限500字以内）
+				3、预期目标（技术创新性、经济社会效益，限500字以内）';" οnclick="if(document.getElementById('inform').value=='1、主要问题（需要解决的重大技术问题，限500字以内）
+				2、技术关键（所需的关键技术、主要指标，限500字以内）
+				3、预期目标（技术创新性、经济社会效益，限500字以内）')document.getElementById('inform').value='';">1、主要问题（需要解决的重大技术问题，限500字以内）2、技术关键（所需的关键技术、主要指标，限500字以内）3、预期目标（技术创新性、经济社会效益，限500字以内）</textarea>
+			</td>
+		</tr>
+		<tr>
+			<td class="maintd">
+				<b>研究类型</b>
+			</td>
+			<td class="maintd" colspan="2">
+				<label>
+					<input id="reject1" name="reject" type="checkbox"/>基础研究
+				</label>
+				<label>
+					<input id="reject2" name="reject" type="checkbox"/>应用研究
+				</label>
+				<label>
+					<input id="reject3" name="reject" type="checkbox"/>试验发展 
+				</label>
+				<label>
+					<input id="reject4" name="reject" type="checkbox"/>研究发展与成果应用  
+				</label>
+				<label>
+					<input id="reject5" name="reject" type="checkbox"/>技术推广与科技服务
+				</label>
+			</td>
+		</tr>
+		<tr>
+			<td class="maintd">
+				<b>技术需求合作模式</b>
+			</td>
+			<td class="maintd" colspan="2">
+				<label>
+					<input id="mod1" name="mod" type="radio" checked/>独立开发
+				</label>
+				<label>
+					<input id="mod2" name="mod" type="radio"/>技术转让
+				</label>
+				<label>
+					<input id="mod3" name="mod" type="radio"/>技术入股
+				</label>
+				<label>
+					<input id="mod4" name="mod" type="radio"/>合作开发
+				</label>
+			</td>
+		</tr>
+		<tr>
+			<td class="maintd">
+				<b>计划总投资</b>
+			</td>
+			<td class="maintd">
+				<input id="balance" size="70"/>
+			</td>
+			<td class="maintd">
+				<b>万元</b>
+			</td>
+		</tr>
+	</table>
+	<br>
+	<br>
+	<button οnclick="Ttp()">提交</button>
+</center>
+</body>
+<script>
+function isWonder(str){
+	var isRight = true;
+	for (ilen = 0; ilen < str.length; ilen++) {
+			if(isRight)
+			{
+				if (!((str.charAt(ilen) >= '0' && str.charAt(ilen) <= '9')||str.charAt(ilen)=='.')) {
+	                   return false;
+	            }
+				if (str.charAt(ilen)=='.')
+					isRight = false;
+			}
+			else
+			{
+				if (str.charAt(ilen) < '0' || str.charAt(ilen) > '9') {
+	                   return false;
+	            }
+			}
+        }
+    return true;
+}
+function Ttp(){
+	//采取数据——技术需求名称
+	var inform = document.getElementById("inform").value;
+	//采取数据——重大科技需求概述 
+	var need = document.getElementById("need").value;
+	//采取数据——研究类型
+	var rejectMult = "";
+	if(document.getElementById("reject1").checked==true)
+		rejectMult = rejectMult + "1";
+	if(document.getElementById("reject2").checked==true)
+		rejectMult = rejectMult + "2";
+	if(document.getElementById("reject3").checked==true)
+		rejectMult = rejectMult + "3";
+	if(document.getElementById("reject4").checked==true)
+		rejectMult = rejectMult + "4";
+	if(document.getElementById("reject5").checked==true)
+		rejectMult = rejectMult + "5";
+	//采取数据——技术需求合作模式
+	var modSin = "";
+	if(document.getElementById("mod1").checked==true)
+		modSin = modSin + "1";
+	else if(document.getElementById("mod2").checked==true)
+		modSin = modSin + "2";
+	else if(document.getElementById("mod3").checked==true)
+		modSin = modSin + "3";
+	else if(document.getElementById("mod4").checked==true)
+		modSin = modSin + "4";
+	//采取数据——预算
+	var balance = document.getElementById("balance").value;
+	//判定
+	if(inform==""||need==""||rejectMult==""||modSin==""||balance=="")
+		alert("输入内容或选项为空！");
+	else if(inform.length>500)
+		alert("概述最多写500字！");
+	else if(!isWonder(balance))
+		alert("预算中只可以填数字，小数点最多一个！");
+	else
+		onSubmitRunning(rejectMult,modSin);
+}
+function onSubmitRunning(RejectMult,ModSin){
+	var Inform = document.getElementById("inform").value;
+	var Need = document.getElementById("need").value;
+	var Balance = document.getElementById("balance").value;
+	var xmlHttp = null;
+	try{
+		xmlHttp = new XMLHttpRequest();
+	   } catch (e1) {
+	   	 try {
+	   		 xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+		} catch (e2) {
+			alert("Your browser does not support XMLHTTP!");
+			return;
+		}
+	}
+	xmlHttp.onreadystatechange = function() {
+		if (xmlHttp.readyState == 4) {
+		    if (xmlHttp.status == 200) 
+		    {
+				// Do Nothing...
+				alert("申请成功！");
+	    	}
+	   	}
+	};
+    var url ="servlet/AddInformationServlet"; 
+    var server = "";
+    server += ("balance="+Balance);
+    server += ("&"+"simpleinformation="+Inform);
+    server += ("&"+"researchkind="+RejectMult);
+    server += ("&"+"worktogethermodern="+ModSin);
+    server += ("&"+"name="+Need);
+	xmlHttp.open("POST", url, true);
+	xmlHttp.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+	xmlHttp.send(server);
+}
+</script>
+</html>

@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+</head>
+
+
+
+<style>
+    body{
+        background: url("img/1.jpg");
+        background-size:100% 100% ;
+        background-attachment: fixed
+
+    }
+    table{
+        border-spacing: 10px 20px;
+        border: solid 1px aqua ;
+        margin-top:250px;
+    }
+    #top{
+
+        text-align:left;
+        vertical-align:top;
+
+    }
+</style>
+<body>
+
+<form action="Servlet?method=login" method="post" id="login" name="login" onsubmit="return check()">
+
+    <table align="center" valign="middle">
+        <tr><td id="top">用户登录 </td></tr>
+        <tr>
+            <td>用户名:</td>
+            <td><input type="text" name="user"  id="user" > </td></tr>
+
+
+        <tr>
+            <td> 密码：</td>
+            <td><input type="password"  name="password"> </td></tr>
+        <tr>
+            <td>请选择登录方式:</td>
+            <td >
+                <select name="select">
+
+                    <option value="1">销售员登陆</option>
+                    <option value="2">销售经理登陆</option>
+                    <option value="3">生产计划员登陆</option>
+                    <option value="4">生产部经理登陆</option>
+                    <option value="5">车间工人登陆</option>
+                    <option value="6">公司总经理登录</option>
+
+                </select>
+
+            </td></tr>
+
+
+
+
+        <tr>  <td  colspan="2" align="center"><input type="submit" value="确定" name="submit" id="submit">
+            <input type="reset" > </td>
+        </tr>
+
+
+        <tr>
+            <td colspan="2">
+                提示信息：<span style="color:red;" id="warning"></span>
+            </td>
+        </tr>
+
+
+
+
+
+
+    </table>
+
+</form>
+<script language=JavaScript>
+
+
+    function check()
+    {
+        if (login.username.value == "")
+        {
+            alert("请输入用户名!");
+            login.username.focus();
+            return (false);
+        }
+        if (login.password.value == "")
+        {
+            alert("请输入密码!");
+            login.password.focus();
+            return (false);
+        }
+
+    }
+
+
+    var user = document.getElementById('username');  //获取用户控件
+    user.onblur = function () {  //当用户离开当前文本框的时行验证
+        //1.创建Ajax对象
+        var xhr = new XMLHttpRequest();
+        //2.创建请求事件的监听
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                if (xhr.responseText == 1) {  //当前用户存在
+                    var warning = document.getElementById('warning');
+                    warning.style='color:green';
+
+                    warning.innerHTML = '此用户名存在';
+
+                }else
+                {
+
+
+                    var warning = document.getElementById('warning');
+                    warning.style='color:red';
+                    warning.innerHTML = '此用户名不存在';
+                    document.getElementById('submit').disabled = true;
+
+
+
+                }
+            }
+        }
+
+        //3.初始化一个url请求
+        var user = document.getElementById('username').value;
+        var data = 'username='+user; //生成post请求数据
+        var url = 'check.php';
+        xhr.open('post',url,true); //请求类型为post，交互方式为异步
+
+        //4.设置请求头
+        xhr.setRequestHeader('content-type','application/x-www-form-urlencoded');
+
+        //5.发送url请求,需要传入参数
+        xhr.send(data);
+
+        var submit = document.getElementById('submit');
+        submit.onclick = function () {
+            var tips = document.getElementById('tips');
+            tips.innerHTML = '当前用户名不存在';
+            return false;
+        }
+    }
+
+
+</script>
+
+
+</body>
+</html>

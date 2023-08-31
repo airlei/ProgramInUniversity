@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="JS/echarts.js"></script>
+    <script src="JS/jquery-3.1.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/echarts-gl/dist/echarts-gl.min.js"></script>
+</head>
+<body>
+<!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+<div id="arean" style="width: 2000px;height:1000px;"></div>
+<script type="text/javascript">
+    var day_iddata = [];//编号
+    var buy_nbrdata = [];//卖出方代码
+    var incntdata = [];//买入数量
+    var inrounddata=[];//买入金额
+    var outcntdata=[];//卖出数量
+    var outrounddata=[];//卖出金额
+    var lirundata=[];//销售利润
+    var url = "Servletselect4";
+    <!--使用ajax动态获取数据，将获取的数据放到数组中-->
+    $.ajax({
+        async: false,
+        type: "GET",
+        url: url,
+        dataType: 'json',
+        contentType: "application/json;charset=UTF-8",
+        success: function(result){
+            for (var i = 0; i < result.length; i++) {
+                day_iddata.push(result[i].day_id);
+                buy_nbrdata.push(result[i].buy_nbr);
+                incntdata.push(result[i].incnt);
+                inrounddata.push(result[i].inround);
+                outcntdata.push(result[i].outcnt);
+                outrounddata.push(result[i].outround);
+                lirundata.push(result[i].lirun);
+            }
+        }
+    });
+
+    var chartDom = document.getElementById('arean');
+    var myChart = echarts.init(chartDom);
+    var option;
+    var data =[]
+    // console.log(data);
+    // console.log("*****************8");
+    for(var i=0;i<day_iddata.length;i++)
+    {
+        data.push([day_iddata[i],buy_nbrdata[i],lirundata[i]]);
+        // console.log(data);
+    }
+    // var data=[[day_iddata[0],buy_nbrdata[0],lirundata[0]],[day_iddata[1],buy_nbrdata[1],lirundata[1]]]
+    // console.log("**********************");
+    console.log(data);
+    option = {
+        tooltip: {},
+        visualMap: {
+            max: 20,
+            inRange: {
+                color: [
+                    '#313695',
+                    '#4575b4',
+                    '#74add1',
+                    '#abd9e9',
+                    '#e0f3f8',
+                    '#ffffbf',
+                    '#fee090',
+                    '#fdae61',
+                    '#f46d43',
+                    '#d73027',
+                    '#a50026'
+                ]
+            }
+        },
+        xAxis3D: {
+            type: 'category',
+        },
+        yAxis3D: {
+            type: 'category',
+        },
+        zAxis3D: {
+            type: 'value'
+        },
+        grid3D: {
+            boxWidth: 250,
+            boxDepth: 100,
+            light: {
+                main: {
+                    intensity: 1.2
+                },
+                ambient: {
+                    intensity: 0.3
+                }
+            }
+        },
+        series: [
+            {
+                type: 'bar3D',
+                data: data.map(function (item) {
+                    return {
+                        value: [item[0], item[1], item[2]]
+                    };
+                }),
+                shading: 'color',
+                label: {
+                    show: false,
+                    fontSize: 16,
+                    borderWidth: 1
+                },
+                itemStyle: {
+                    opacity: 1
+                },
+                emphasis: {
+                    label: {
+                        fontSize: 20,
+                        color: '#fbc2eb'
+                    },
+                    itemStyle: {
+                        color: '#a6c0fe'
+                    }
+                }
+            }
+        ]
+    };
+
+    option && myChart.setOption(option);
+</script>
+
+</body>

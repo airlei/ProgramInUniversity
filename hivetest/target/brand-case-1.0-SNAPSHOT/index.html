@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>ECharts</title>
+    <!-- 引入刚刚下载的 ECharts 文件 -->
+    <script src="JS/echarts.js"></script>
+    <script src="JS/jquery-3.1.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/echarts-gl/dist/echarts-gl.min.js"></script>
+</head>
+<body>
+
+<div id="main" class="list-main">
+    <!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
+    <div id="areaone" style="width: 2000px;height:1000px;"></div>
+<script type="text/javascript">
+    var goodsNamedata = [];
+    var salesMountdata = [];
+    var salesMountdata0 = [];
+    var url = "Servletselect";
+    <!--使用ajax动态获取数据，将获取的数据放到数组中-->
+    $.ajax({
+        async: false,
+        type: "GET",
+        url: url,
+        dataType: 'json',
+        contentType: "application/json;charset=UTF-8",
+        success: function(result){
+            console.log(result);
+            for (var i = 0; i < result.length; i++) {
+
+                goodsNamedata.push(result[i].day_id);
+
+                salesMountdata.push(result[i].round);
+                salesMountdata0.push(result[i].cnt);
+                console.log(result[i].cnt)
+
+            }
+        }
+    });
+    var myChartone = echarts.init(document.getElementById('areaone'));
+    // 指定图表的配置项和数据
+    var optionone = {
+        title: {
+            text: 'ECharts动态展示数据'
+        },
+        tooltip: {},
+        legend: {
+            data: ['sum','mony'],
+            orient: 'horizontal',
+            itemGap: 40,
+            textStyle: {
+                color: 'red',
+                fontSize: '20px',
+                fontWeight: 700
+            }
+        },
+        xAxis: {
+            data: goodsNamedata
+        },
+        yAxis: {
+        },
+        series: [{
+            name: 'sum',
+            type: 'bar',
+            data: salesMountdata
+        },
+        {
+            name: 'mony',
+            type: 'bar',
+            data: salesMountdata0
+        }]
+    };
+    myChartone.setOption(optionone);
+</script>
+</div>
+</body>
+</html>

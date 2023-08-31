@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--namespace ：名称空间-->
+
+<mapper namespace="mapper.hetongMapper">
+
+    <insert id="addHetong" useGeneratedKeys="true" keyProperty="id">
+        insert into hetong( nameHetong, nameHuowu, kind, color, num,timeQian,timeJiao,people)
+        VALUES (#{nameHetong},#{nameHuowu},#{kind},#{color},#{num},#{timeQian},#{timeJiao},#{people} )
+
+    </insert>
+    <select id="selectall" resultType="pojo.hetong">
+        select
+            *
+        from hetong;
+    </select>
+
+
+</mapper>

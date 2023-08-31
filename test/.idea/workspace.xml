@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="95b9fb6f-d47f-425e-9ed5-5c9ac77219d1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../HDFSClient/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HDFSClient/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../drsign/src/main/java/aa.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spark/spark-core/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spark/spark-core/src/main/java/JavaWordCount.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spark/spark-core/src/main/scala/ScalaWordCount.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spark/spark-core/src/main/scala/Test.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../studt/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../studt/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../studt/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../studt/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../studt/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../studt/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../studt/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../studt/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../team/src/main/java/IPUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../team/src/main/java/cc/IPUil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../team/src/main/java/ceshi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../team/src/main/java/clean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../team/src/main/java/utils/IPUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../team/src/main/resources/ip2region.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test_class/src/main/java/ex101.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test_class/src/main/java/ex102.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test_class/src/main/java/ex103.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test_class/src/main/java/ex104.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\Study\maven\apache-maven-3.8.3\maven-repository" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../../../maven/apache-maven-3.8.3" />
+        <option name="userSettingsFile" value="D:\Study\maven\apache-maven-3.8.3\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
+  <component name="ProjectId" id="2OKKUOquOBW0afozrRJBN5HCSFV" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+    <option name="showVisibilityIcons" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.openapi.externalSystem.service.settings.ExternalSystemGroupConfigurable" value="ALL" />
+    <property name="go.formatter.settings.were.checked" value="true" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="project.structure.last.edited" value="项目" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="MTConfigurable" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="95b9fb6f-d47f-425e-9ed5-5c9ac77219d1" name="Changes" comment="" />
+      <created>1681303848556</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1681303848556</updated>
+      <workItem from="1681303849958" duration="7000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

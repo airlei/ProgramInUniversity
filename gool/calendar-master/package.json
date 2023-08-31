@@ -1,0 +1,22 @@
+{
+  "family": "tianxiangbing",
+  "name": "jqcalendar",
+  "description": "js 日历",
+  "version": "1.1.7",
+  "main": "calendar.js",
+  "author": {
+    "name": "田想兵",
+    "url": "https://github.com/tianxiangbing/calendar"
+  },
+  "scripts": {
+    "prepublish": "grunt"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.4",
+    "grunt-contrib-concat": "^0.5.1",
+    "grunt-contrib-copy": "^0.8.0",
+    "grunt-contrib-cssmin": "^0.12.2",
+    "grunt-contrib-uglify": "~0.4.0",
+    "grunt-contrib-watch": "^0.6.1"
+  }
+}
